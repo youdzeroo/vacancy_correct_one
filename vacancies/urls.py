@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from core.views import VacanciesView
+from companies.views import CompaniesView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('companies/', CompaniesView.as_view({'get': 'list', 'post': 'create'})),
+    path('companies/<int:pk>/', CompaniesView.as_view({'get': 'retrieve', 'put': 'update', 'delete': 'destroy'})),
+    path('', VacanciesView.as_view({'get': 'list', 'post': 'create'})),
+    path('vacancy/<int:pk>/', VacanciesView.as_view({'get': 'retrieve', 'put': 'update', 'delete': 'destroy'})),
+
 ]
