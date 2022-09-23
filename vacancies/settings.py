@@ -98,6 +98,9 @@ DATABASES = {
         'PASSWORD': 'superpass',
         'HOST': 'localhost',
         'PORT': '',
+        'TEST': {
+            'NAME': 'vacancies',
+        },
     }
 }
 
