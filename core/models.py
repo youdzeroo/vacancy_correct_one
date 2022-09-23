@@ -10,6 +10,7 @@ class Types(models.Model):
 
 
 class Vacancies(models.Model):
+    title = models.CharField(max_length=250)
     duration = models.CharField(max_length=255)
     position = models.CharField(max_length=255)
     terms = models.TextField()

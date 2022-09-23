@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from core.views import VacanciesView
 from companies.views import CompaniesView
+from custom_auth.views import RegisterView, LoginView
+from employee.views import EmployeeView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,5 +26,8 @@ urlpatterns = [
     path('companies/<int:pk>/', CompaniesView.as_view({'get': 'retrieve', 'put': 'update', 'delete': 'destroy'})),
     path('', VacanciesView.as_view({'get': 'list', 'post': 'create'})),
     path('vacancy/<int:pk>/', VacanciesView.as_view({'get': 'retrieve', 'put': 'update', 'delete': 'destroy'})),
-
+    path('employee/', EmployeeView.as_view({'get': 'list', 'post': 'create'})),
+    path('employee/<int:pk>/', EmployeeView.as_view({'get': 'retrieve', 'put': 'update', 'delete': 'destroy'})),
+    path('register', RegisterView.as_view()),
+    path('login', LoginView.as_view()),
 ]

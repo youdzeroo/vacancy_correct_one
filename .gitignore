@@ -1,6 +1,8 @@
 venv
 db.sqlite3
-.idea
-idea/workspace.xml
-pycache
+.idea/
+__pycache__
 media
+.env
+static
+
