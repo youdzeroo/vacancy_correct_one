@@ -96,11 +96,8 @@ DATABASES = {
         'NAME': 'vacancy_db',
         'USER': 'vacancy_user',
         'PASSWORD': 'superpass',
-        'HOST': 'localhost',
-        'PORT': '',
-        'TEST': {
-            'NAME': 'vacancies',
-        },
+        'HOST': 'db',
+        'PORT': '5432',
     }
 }
 
